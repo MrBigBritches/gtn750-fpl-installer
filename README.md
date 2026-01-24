@@ -8,3 +8,7 @@ Drag and drop utility to move flightplans into the correct location for the GTN7
 
 
 ## Build Instructions
+
+
+## License
+Travel icons created by [Good Ware](https://www.flaticon.com/authors/good-ware) - [Flaticon](https://www.flaticon.com/free-icons/travel)

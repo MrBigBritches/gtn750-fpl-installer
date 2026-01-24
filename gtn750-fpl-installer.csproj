@@ -12,4 +12,8 @@
     <EditorConfigFiles Remove=".editorconfig" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="assets\flight.ico" />
+  </ItemGroup>
+
 </Project>
