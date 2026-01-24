@@ -6,6 +6,9 @@
     <RootNamespace>gtn750_fpl_installer</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>assets\flight.ico</ApplicationIcon>
+    <PlatformTarget>x86</PlatformTarget>
+    <PublishTrimmed>True</PublishTrimmed>
   </PropertyGroup>
 
   <ItemGroup>
