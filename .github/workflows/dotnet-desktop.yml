@@ -30,9 +30,7 @@ jobs:
 
     # Build the solution
     - name: Compile and publish solution
-      run: |
-        dotnet build --configuration Release --no-restore
-        dotnet publish -c Release --property:PublishDir=../publish -r win-x86 -p:PublishSingleFile=true --self-contained true
+      run: dotnet publish -c Release -r win-x86 -p:PublishDir=../publish -p:PublishSingleFile=true -p:DebugType=None --no-restore --self-contained true --version-suffix release
 
     # Archive build result
     # - name: Create artifact archive
