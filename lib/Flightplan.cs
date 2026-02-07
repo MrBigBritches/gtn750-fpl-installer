@@ -6,6 +6,7 @@
 
         internal string FileName => Path.GetFileName(path);
         internal string Extension => Path.GetExtension(path);
+        internal string Fullpath => path;
 
 
         internal void WriteTo(string path)
