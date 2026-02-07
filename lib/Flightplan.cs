@@ -12,7 +12,7 @@
         {
             _reader.Position = 0;
 
-            using FileStream writer = File.OpenWrite(path);
+            using FileStream writer = File.Open(path, FileMode.Create, FileAccess.Write);
             _reader.CopyTo(writer);
         }
 
