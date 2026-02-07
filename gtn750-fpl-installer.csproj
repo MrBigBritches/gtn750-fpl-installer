@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include=".github\workflows\dotnet-desktop.yml" />
+    <None Include=".github\workflows\create-release.yml" />
   </ItemGroup>
 
   <ItemGroup>

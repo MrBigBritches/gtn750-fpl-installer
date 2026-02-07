@@ -1,0 +1,48 @@
+﻿name: Create Release
+
+env:
+  Solution_Path: gtn750-fpl-installer.slnx
+  Publish_Archive: gtn750-fpl-installer.zip
+  Publish_Directory: ..\publish
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Release Please
+      uses: googleapis/release-please-action@v4
+      id: release
+      
+    # Install the .NET Core workload
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+    # Restore the application and install any dependencies
+    - name: Install dependencies
+      run: dotnet restore
+
+    # Build the solution
+    - name: Compile and publish solution
+      run: dotnet publish -c Release -r win-x86 -p:PublishDir=$env:Publish_Directory -p:PublishSingleFile=true -p:DebugType=None --no-restore --self-contained true --version-suffix release
+
+    # Archive build result
+    - name: Create artifact archive
+      run: Compress-Archive -Path $env:Publish_Directory\* -DestinationPath $env:Publish_Directory\$env:Publish_Archive
+
+    # Upload build arifact to release
+    - name: Upload Release Artifact
+      if: ${{ steps.release.outputs.release_created }}
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: gh release upload ${{ steps.release.outputs.tag_name }} $env:Publish_Directory\$env:Publish_Archive
