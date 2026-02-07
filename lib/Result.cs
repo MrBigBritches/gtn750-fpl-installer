@@ -11,7 +11,6 @@ namespace gtn750_fpl_installer.lib
             Negative(new Markup($"[red]{content}[/]"));
         }
 
-
         internal static void Negative(FlightplanException exception)
         {;
 
