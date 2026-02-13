@@ -10,23 +10,23 @@
     <PlatformTarget>x86</PlatformTarget>
     <Copyright>© $([System.DateTime]::Now.Year) MrBigBritches</Copyright>
     <PublishTrimmed>True</PublishTrimmed>
-    <VersionPrefix>0.0.0</VersionPrefix>
+    <VersionPrefix>1.0.0</VersionPrefix>
   </PropertyGroup>
 
   <ItemGroup>
-    <EditorConfigFiles Remove=".editorconfig" />
+    <EditorConfigFiles Remove=".editorconfig"/>
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="assets\flight.ico" />
+    <Content Include="assets\flight.ico"/>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include=".github\workflows\create-release.yml" />
+    <None Include=".github\workflows\create-release.yml"/>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Spectre.Console" Version="0.54.0" />
+    <PackageReference Include="Spectre.Console" Version="0.54.0"/>
   </ItemGroup>
 
 </Project>
