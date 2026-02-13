@@ -32,7 +32,7 @@ jobs:
 
     # Restore the application and install any dependencies
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore -r win-x86
 
     # Build the solution
     - name: Compile and publish solution
