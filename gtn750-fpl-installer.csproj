@@ -10,7 +10,7 @@
     <PlatformTarget>x86</PlatformTarget>
     <Copyright>© $([System.DateTime]::Now.Year) MrBigBritches</Copyright>
     <PublishTrimmed>True</PublishTrimmed>
-    <VersionPrefix>1.0.0</VersionPrefix>
+    <VersionPrefix>0.0.0</VersionPrefix>
   </PropertyGroup>
 
   <ItemGroup>
