@@ -8,5 +8,7 @@
       "xpath": "//Project/PropertyGroup/VersionPrefix"
     }
   ],
-  "packages": { ".": {} }
+  "packages": {
+    ".": {} 
+  }
 }
